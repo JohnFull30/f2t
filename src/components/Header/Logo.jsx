@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
       <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#FF3008' }}>
-        DOORDASH
+        FARM2TABLE
       </Typography>
     </Box>
   );
