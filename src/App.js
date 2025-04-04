@@ -7,6 +7,7 @@ import herbIcon from './assets/icons/herb-icon.png';
 import milkIcon from './assets/icons/milk-icon.png';
 import strawberryIcon from './assets/icons/strawberry-icon.png';
 import veggieIcon from './assets/icons/veggie-icon.png';
+import FarmCardSection from './components/FarmCardSection';
 
 const iconStyle = {
   width: 40,
@@ -33,6 +34,7 @@ function App() {
     <div>
       <ToolBar />
       <CarouselComponent items={carouselItems} />
+      <FarmCardSection />
     </div>
   );
 }
