@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 const SearchBar = () => {
   return (
     <TextField
-      placeholder="Search DoorDash"
+      placeholder="Search Farm2Table"
       size="small"
       InputProps={{
         startAdornment: (
