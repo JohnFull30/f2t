@@ -7,6 +7,7 @@ import herbIcon from './assets/icons/herb-icon.png';
 import milkIcon from './assets/icons/milk-icon.png';
 import strawberryIcon from './assets/icons/strawberry-icon.png';
 import veggieIcon from './assets/icons/veggie-icon.png';
+import cheeseIcon from './assets/icons/cheese-icon.png';  
 import FarmCardSection from './components/FarmCardSection';
 
 const iconStyle = {
@@ -23,7 +24,7 @@ const carouselItems = [
   { label: 'Honey', icon: <img src={flowerIcon} alt="honey" style={iconStyle} /> }, // placeholder
   { label: 'Milk', icon: <img src={milkIcon} alt="milk" style={iconStyle} /> },
   { label: 'Vegetables', icon: <img src={veggieIcon} alt="vegetables" style={iconStyle} /> },
-  { label: 'Cheese', icon: <img src={milkIcon} alt="cheese" style={iconStyle} /> }, // reused milk
+  { label: 'Cheese', icon: <img src={cheeseIcon} alt="cheese" style={iconStyle} /> }, // reused milk
   { label: 'Fruit Basket', icon: <img src={strawberryIcon} alt="fruit" style={iconStyle} /> },
   { label: 'Herbs', icon: <img src={herbIcon} alt="herbs" style={iconStyle} /> }, // repeated
 ];
