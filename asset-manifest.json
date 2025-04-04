@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/f2t/static/js/main.854fef66.js",
+    "main.js": "/f2t/static/js/main.937bcb55.js",
     "static/js/453.8e1c3db0.chunk.js": "/f2t/static/js/453.8e1c3db0.chunk.js",
     "static/media/farm-placeholder3.png": "/f2t/static/media/farm-placeholder3.78fa7205d71a88f78b80.png",
     "static/media/farm-placeholder2.png": "/f2t/static/media/farm-placeholder2.1203ad782da422c9b58a.png",
@@ -10,12 +10,13 @@
     "static/media/veggie-icon.png": "/f2t/static/media/veggie-icon.d7750db0a0cd549b8630.png",
     "static/media/flower-icon.png": "/f2t/static/media/flower-icon.06c7e30baf33c0d813cb.png",
     "static/media/egg-icon.png": "/f2t/static/media/egg-icon.42f268027a0d1689b708.png",
+    "static/media/cheese-icon.png": "/f2t/static/media/cheese-icon.522ea8a42e4172332cde.png",
     "static/media/herb-icon.png": "/f2t/static/media/herb-icon.cdcd82fc6d9c529f28be.png",
     "index.html": "/f2t/index.html",
-    "main.854fef66.js.map": "/f2t/static/js/main.854fef66.js.map",
+    "main.937bcb55.js.map": "/f2t/static/js/main.937bcb55.js.map",
     "453.8e1c3db0.chunk.js.map": "/f2t/static/js/453.8e1c3db0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.854fef66.js"
+    "static/js/main.937bcb55.js"
   ]
 }
