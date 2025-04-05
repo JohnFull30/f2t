@@ -33,35 +33,43 @@ const CarouselComponent = ({ items }) => {
           '&::-webkit-scrollbar': { display: 'none' },
         }}
       >
-        {items.slice(0, 10).map((item, index) => (
-          <Box
-            key={index}
-            sx={{
-              flex: '0 0 auto',
-              width: { xs: '80%', sm: '250px' },
-              height: '150px',
-              borderRadius: 2,
-              boxShadow: 1,
-              bgcolor: 'background.paper',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: 1,
-            }}
-          >
-            {item.icon}
-            <Typography variant="subtitle1">{item.label}</Typography>
-          </Box>
-        ))}
-      </Box>
+      {items.slice(0, 10).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            flex: '0 0 auto',
+            width: { xs: '70%', sm: '180px' },
+            height: '120px',
+            borderRadius: 3,
+            border: '1px solid #e0e0e0',
+            bgcolor: '#fafafa',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+            '&:hover': {
+              transform: 'scale(1.03)',
+              boxShadow: 2,
+            },
+            cursor: 'pointer',      
+               }}
+>
+  {item.icon}
+  <Typography variant="subtitle2" sx={{ mt: 1, fontWeight: 500 }}>
+    {item.label}
+  </Typography>
+</Box>
 
-      <IconButton 
-        onClick={() => handleScroll('right')} 
-        sx={{ position: 'absolute', right: 0, zIndex: 10 }}
-      >
-        <ChevronRight />
-      </IconButton>
+      ))}
+    </Box>
+
+    <IconButton
+      onClick={() => handleScroll('right')}
+      sx={{ position: 'absolute', right: 0, zIndex: 10 }}
+    >
+      <ChevronRight />
+    </IconButton>
     </Box>
   );
 };

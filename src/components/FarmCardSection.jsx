@@ -28,11 +28,11 @@ const sampleFarms = [
 
 const FarmCardSection = () => {
   return (
-    <Box sx={{ px: { xs: 2, md: 6 }, py: 4 }}>
+    <Box sx={{ px: { xs: 2, md: 12 }, py: 4 }}>
       <Typography
         variant="h5"
         gutterBottom
-        sx={{ textAlign: { xs: 'center', md: 'left' } }}
+        sx={{ textAlign: { xs: 'center', md: 'center' } }}
       >
         Explore Local Farms
       </Typography>
@@ -40,7 +40,7 @@ const FarmCardSection = () => {
       <Grid2
         container
         spacing={3}
-        justifyContent={{ xs: 'center', md: 'flex-start' }}
+        justifyContent={{ xs: 'center', md: 'center' }}
       >
         {sampleFarms.map((farm, index) => (
           <Grid2 item xs={12} sm={6} md={4} key={index}>
