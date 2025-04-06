@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid2, Typography } from '@mui/material';
+import { Box, Typography, Grid2 } from '@mui/material';
 import FarmCard from './FarmCard';
 import farmImg1 from '../assets/images/farm-placeholder1.png';
 import farmImg2 from '../assets/images/farm-placeholder2.png';
@@ -29,19 +29,11 @@ const sampleFarms = [
 const FarmCardSection = () => {
   return (
     <Box sx={{ px: { xs: 2, md: 12 }, py: 4 }}>
-      <Typography
-        variant="h5"
-        gutterBottom
-        sx={{ textAlign: { xs: 'center', md: 'center' } }}
-      >
+      <Typography variant="h5" gutterBottom textAlign="center">
         Explore Local Farms
       </Typography>
 
-      <Grid2
-        container
-        spacing={3}
-        justifyContent={{ xs: 'center', md: 'center' }}
-      >
+      <Grid2 container spacing={3} justifyContent="center">
         {sampleFarms.map((farm, index) => (
           <Grid2 item xs={12} sm={6} md={4} key={index}>
             <FarmCard {...farm} />
