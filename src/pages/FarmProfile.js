@@ -1,10 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, /*useParams*/ } from 'react-router-dom';
 import { Box, Typography, Container, Divider } from '@mui/material';
 import farmImg1 from '../assets/images/farm-placeholder1.png'; // example image
 
 const FarmProfile = () => {
-  useParams(); // Extract the farm id from URL
+  const navigate = useNavigate();
+  // const { id } = useParams(); saved for future farm API usage
 
   // Dummy data for now (replace with real farm data or API)
   const farm = {
@@ -25,6 +26,24 @@ const FarmProfile = () => {
       />
 
       <Container sx={{ py: 4 }}>
+        {/* Back Button */}
+        <Box sx={{ mb: 2 }}>
+          <Typography
+            variant="body2"
+            sx={{
+              color: '#FF3008',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              fontWeight: 'medium',
+              '&:hover': { textDecoration: 'underline' },
+            }}
+            onClick={() => navigate(-1)}
+          >
+            ← Back to Farm Exploer
+          </Typography>
+        </Box>
+
         <Typography variant="h4" fontWeight="bold">{farm.name}</Typography>
         <Typography variant="subtitle1" color="text.secondary">{farm.location}</Typography>
 
