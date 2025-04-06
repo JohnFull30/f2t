@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ToolBar from './components/Header/ToolBar';
 import CarouselComponent from './components/CarouselComponent';
@@ -37,18 +37,14 @@ function App() {
   return (
     <Router>
       <ToolBar />
-      <Routes>
-        <Route
-          path="/f2t"
-          element={
-            <>
-              <CarouselComponent items={carouselItems} />
-              <FarmCardSection />
-            </>
-          }
-        />
-        <Route path="/farm/:id" element={<FarmProfile />} />
-      </Routes>
+        <Routes>
+      
+          <Route path="/" element={<Navigate to="/f2t" replace />} />
+          <Route path="/f2t" element={<><CarouselComponent items={carouselItems} /><FarmCardSection /></>} />
+          <Route path="/farm-profile" element={<FarmProfile />} />
+        
+        </Routes>
+
     </Router>
   );
 }
