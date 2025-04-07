@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
@@ -6,11 +7,21 @@ const CarouselComponent = ({ items }) => {
   const scrollRef = useRef(null);
 
   const handleScroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -300 : 300;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    const container = scrollRef.current;
+    if (!container) return;
+  
+    const scrollAmount = direction === 'left' ? -300 : 300;
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+  
+    if (direction === 'right' && container.scrollLeft + scrollAmount >= maxScrollLeft) {
+      container.scrollTo({ left: 0, behavior: 'smooth' }); // Loop to start
+    } else if (direction === 'left' && container.scrollLeft + scrollAmount <= 0) {
+      container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' }); // Loop to end
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+  
 
   return (
     <Box sx={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
