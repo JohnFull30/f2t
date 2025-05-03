@@ -18,4 +18,3 @@ npm run deploy
 
 
 echo "✅ Deployed to gh-pages using npm run deploy!"
-
